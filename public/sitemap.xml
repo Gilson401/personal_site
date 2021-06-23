@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.gilsonpaulo.com.br/</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.gilsonpaulo.com.br/artigos/arredondar-decimal-javascript</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.gilsonpaulo.com.br/artigos/dark-mode-em-nextjs</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.gilsonpaulo.com.br/blog</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/portfolio</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/contato</loc>
+  <lastmod>2020-11-04T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/artigos/cookies-vs-local-storage</loc>
+  <lastmod>2020-11-10T21:21:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/artigos/jest-mongodb-erros</loc>
+  <lastmod>2020-11-12T21:18:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/artigos/formulario-de-contato-react-sem-back-end</loc>
+  <lastmod>2020-11-14T21:18:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gilsonpaulo.com.br/artigos/testes-integracao-jest-express-mongodb</loc>
+  <lastmod>2020-11-17T21:18:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+</urlset>

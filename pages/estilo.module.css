@@ -1,0 +1,25 @@
+.bg_video{
+	position: fixed; 
+	right: 0; 
+	bottom: 0;
+	min-width: 10%; 
+	min-height: 10%;
+	width: 50%; 
+	height: 50%; 
+	z-index: -1000;
+	background: url(/public/video.mp4) repeat;
+	background-size: 100% 100%; 
+}
+
+
+.centro{
+    display:flex;
+ justify-content :center;
+ /* border: solid 1px red; */
+
+}
+
+body {
+color:red;
+                 
+}
