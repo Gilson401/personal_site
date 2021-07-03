@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styled from 'styled-components';
 import Link from 'next/link'
 
-import { Carousel, Col, Row , Container} from 'react-bootstrap'
+import { Carousel, Col, Row, Container } from 'react-bootstrap'
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+// Import Swiper React components
+import SwiperCore, {
+    Pagination,Navigation
+  } from 'swiper/core';
+
+
+SwiperCore.use([Pagination,Navigation]);
+
+//https://medium.com/makers-byte/the-25-best-personal-portfolio-website-design-inspiration-examples-e2eb1c8734df
 
 const Portfolio = () => {
+
 
     const academialogin = '/media/academialogin.JPG'
     const academiausercreate = '/media/academiausercreate.JPG'
@@ -13,9 +28,9 @@ const Portfolio = () => {
     const darkmode = '/media/darkmode.JPG'
     const whitemode = '/media/whitemode.JPG'
     const [cms1, cms2, cms3, cms4, cms5, cms6] = ['/media/cms1.JPG', '/media/cms2.JPG', '/media/cms3.JPG', '/media/cms4.JPG',
-    '/media/cms5.JPG', '/media/cms6.JPG']
+        '/media/cms5.JPG', '/media/cms6.JPG']
     const [quizz0] = ['/media/quizz0.PNG']
-    const [coders0 , coders1] = ['/media/coders0.PNG', '/media/coders1.PNG']
+    const [coders0, coders1] = ['/media/coders0.PNG', '/media/coders1.PNG']
     const items = [
         {
             src: academialogin,
@@ -111,14 +126,14 @@ const Portfolio = () => {
             header: 'Tela de login.',
             link: 'https://quizzescola.vercel.app/',
             link2: 'https://gilsonpaulo.com.br/portfolio/quizz'
-        },{
+        }, {
             src: coders0,
             altText: 'A rede social',
             caption: 'Rede social clone de Facebook.',
             header: 'Tela de login.',
             link: 'https://coders-seven.vercel.app/signin/',
             link2: 'https://gilsonpaulo.com.br/portfolio/coders'
-        },{
+        }, {
             src: coders1,
             altText: 'A rede social',
             caption: 'Rede social clone de Facebook.',
@@ -128,6 +143,9 @@ const Portfolio = () => {
         }
 
     ];
+
+
+
 
     const RowCol = (element) => {
         return (<Row>
@@ -146,9 +164,11 @@ const Portfolio = () => {
 
             <>
                 <BackBlack>
+
+
                     <Row >
                         <Col xs="12" md="3">
-                            <img className="responsive" src={'/media'+props.srcimage} />
+                            <img className="responsive" src={'/media' + props.srcimage} />
                         </Col>
                         <Col>
 
@@ -173,9 +193,43 @@ const Portfolio = () => {
 
             <p>Projetos desenvolvidos com Reactjs, Mongodb, Nodejs, Expressjs</p>
 
-            {/* =========================================================================== */}
+
             <Banner hidden={false} >
-                <Carousel>
+            <Swiper
+                pagination={{"type": "progressbar" }}
+                className="mySwiper"
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation={true}
+                onSwiper={(swiper) => console.log(swiper.activeIndex)}
+            >
+                {items.map((item, i) => (
+                    <SwiperSlide key={i}>
+                        <Row>
+                            <img className="responsive"
+                                // className="d-block w-100"
+                                src={item.src}
+                                alt={item.altText}
+                            />
+                        </Row>
+                        <Row>
+                            <Col>
+                                {RowCol(<h3>{item.header}</h3>)}
+                                {RowCol(<p>{item.caption}</p>)}
+                                {RowCol(<a href={item.link}>Link da Aplicação</a>)}
+                                {item.link2 ? RowCol(<a href={item.link2}>Detalhe da Aplicação:</a>) : ""}
+                            </Col>
+                        </Row>
+                    </SwiperSlide>
+                ))}
+                
+            </Swiper>
+
+</Banner>
+
+            {/* =========================================================================== */}
+             {/* <Banner hidden={false} >
+                <Carousel >
 
                     {items.map((item, i) => (
 
@@ -200,7 +254,7 @@ const Portfolio = () => {
                     ))}
 
                 </Carousel>
-            </Banner>
+            </Banner> */}
 
             <br /><br /><br /><br />
 
@@ -245,22 +299,22 @@ const Portfolio = () => {
             Feito em parceria com meu colega do curso. Fiquei responsável pelo front-end. `}
             />
 
-<br />
+            <br />
 
-<PortItem
+            <PortItem
                 srcimage={"/characters0.PNG"}
                 link={"/portfolio/characters"}
                 linktext={"CharactersDatabase."}
                 brief={`Este projeto é uma aplicação web CRUD para gestão de usuários de academias de ginástica.`}
             />
-<br />
+            <br />
 
-{/* <BackBlack>
+            {/* <BackBlack>
 <div className="card"></div>
 </BackBlack> */}
-    
+
         </StContainer>
-        
+
     )
 }
 

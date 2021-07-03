@@ -12,11 +12,20 @@ import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
 import Layout from '../components/layout/layout'
 import Head from 'next/head';
+import '../styles/globals.css'
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/thumbs/thumbs.min.css"
 
 
 export function reportWebVitals(metric) {
     
-}
+}   
 
 const App = ({ Component, pageProps }) => {
     //TODO
@@ -35,8 +44,8 @@ const App = ({ Component, pageProps }) => {
     useEffect(() => {
 
         if ((!user.isAdmin) && adminpages.includes(router.route) && router.route.length > 1) {
-            router.push("/login")
-            alert(`Este user não está autorizado em ${router.route}. Redirecionado para login`)
+           // router.push("/login")
+          //  alert(`Este user não está autorizado em ${router.route}. Redirecionado para login`)
 
         }
 
@@ -70,6 +79,11 @@ const App = ({ Component, pageProps }) => {
                     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
+
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet"/>
+
                 </Head>
                 <Component {...pageProps} />
             </Layout>

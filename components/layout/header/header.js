@@ -35,7 +35,7 @@ function Header(props) {
             <style jsx>{
                 `
 
-            .headerAvatar{
+            .headerAvatar{port
                 height: 100%;
                 width: 100px;
             }
