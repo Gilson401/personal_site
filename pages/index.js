@@ -9,6 +9,7 @@ import Link from 'next/link'
 import Apresentacao from '../components/apresentacao.js'
 import Portfolio from '../components/carouselPortfolio.js';
 import NavDoApp from '../components/layout/nav/nav.js';
+import Minhasredes from '../components/minhasredes.js';
 
 function Home() {
 
@@ -28,6 +29,7 @@ function Home() {
 
                 <Apresentacao />
                 <Portfolio />
+                <Minhasredes/>
                 
             </StContainer>
 

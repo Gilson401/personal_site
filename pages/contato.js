@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Button, Form } from 'react-bootstrap';
 import styled from 'styled-components';
-
+// import env from "dotenv"
 
 import emailjs from 'emailjs-com';
 import { init } from 'emailjs-com';
@@ -13,11 +13,17 @@ const Contato = () => {
 
     // Email validation
     const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-    init("user_UeDDUdLb8xg9AXQRmPBV5");
 
+ 
 
-const REACT_APP_EMAILJSUSERID = process.env.REACT_APP_EMAILJSUSERID
+const NEXT_PUBLIC_EMAILJSUSERID = process.env.NEXT_PUBLIC_EMAILJSUSERID
     
+const NEXT_PUBLIC_SENDGRID_SERVICEID = process.env.NEXT_PUBLIC_SENDGRID_SERVICEID
+const NEXT_PUBLIC_SENDGRID_TEMPLATE= process.env.NEXT_PUBLIC_SENDGRID_TEMPLATE
+const NEXT_PUBLIC_SENDGRID_USER= process.env.NEXT_PUBLIC_SENDGRID_USER
+
+init(NEXT_PUBLIC_SENDGRID_USER);
+
 const [state, setForm] = useState({
         name: '',
         email: '',
@@ -49,6 +55,9 @@ const [state, setForm] = useState({
     };
 
     const handleSubmit = (e) => {
+
+
+        
         e.preventDefault();
 
         if (formValid(state)) {
@@ -66,25 +75,24 @@ const [state, setForm] = useState({
                 subject: subject,
                 message: message,
             };
-            emailjs.send('emailumblergp', 'template_l9b1qoj', templateParams, 'user_UeDDUdLb8xg9AXQRmPBV5')
+            emailjs.send(NEXT_PUBLIC_SENDGRID_SERVICEID, NEXT_PUBLIC_SENDGRID_TEMPLATE , templateParams, NEXT_PUBLIC_SENDGRID_USER)
                 .then(function (response) {
-                   
-                    if(name == "disp"){
-                        console.log("fff", REACT_APP_EMAILJSUSERID)
-                    }
+        
+
+                    alert(`
+                        --Sua mensagem foi enviada com os dados  --
+                        Name: ${name}
+                        Email: ${email}
+                        Subject: ${subject}
+                        Message: ${message}        
+                    `);
 
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
 
             resetForm();
-            alert(`
-        --Sua mensagem foi enviada com os dados  --
-        Name: ${name}
-        Email: ${email}
-        Subject: ${subject}
-        Message: ${message}        
-      `);
+            
 
 
         } else {
@@ -208,17 +216,16 @@ const [state, setForm] = useState({
                 </Col>
 
             </Row>
+  
 
         </Container >
     )
 }
 
-// https://medium.com/weekly-webtips/simple-react-contact-form-without-back-end-9fa06eff52d9
+
 
 export default Contato
-const Formlimit = styled(Form)`
-max-width : 400px;
-`
+
 
 const Pulsante = styled.div`
 #box {

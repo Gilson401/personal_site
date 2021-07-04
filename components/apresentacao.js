@@ -33,7 +33,7 @@ const Apresentacao = () => {
                 <Col className="hidesmall" >
 
                     <img
-                        className="d-block w-100 responsive"
+                        className="d-block w-100 borderr"
                         src={'/media/eufoto.png'}
                         alt={'eufoto.png'}
                     />
@@ -119,7 +119,7 @@ h1{
     font-size: 20px;
     }
 }
-.responsive{
+.borderr{
     /* border:  1px solid white; */
     border-radius: 50% ;
 }

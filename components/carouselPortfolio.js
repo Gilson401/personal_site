@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Carousel, Col, Row, Container } from 'react-bootstrap'
-
+import FadeImage from './fadeImage';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -33,8 +33,8 @@ const Portfolio = () => {
             altText: 'empresa de imagens aéreas feitas com drone',
             caption: 'Site institucional da Arquitetar Drone.',
             header: ' Arquitetar Drone',
-            link: 'https://front-app-academia.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/academia'
+            link: 'https://drone.d2slm6rnoh5c4n.amplifyapp.com/',
+            link2: '/portfolio/arquitetardrone'
         },
         {
             src: academialogin,
@@ -42,15 +42,15 @@ const Portfolio = () => {
             caption: 'Featuring JsonWebToken',
             header: ' App Academia Login',
             link: 'https://front-app-academia.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/academia'
+            link2: '/portfolio/academia'
         },
-         {
+        {
             src: characterusercreate,
             altText: 'formulário html feito em react',
             caption: 'Bootstrap Form',
             header: 'Character Usercreate Form',
             link: 'https://charactersdatabase.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/characters'
+            link2: '/portfolio/characters'
         },
 
         {
@@ -59,7 +59,7 @@ const Portfolio = () => {
             caption: 'Área de contato. O proprietário recebe um email de contato diretamente do site.',
             header: 'Form de contato com lib Emailjs .',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            link2: '/portfolio/cms'
         },
         {
             src: quizz0,
@@ -67,14 +67,14 @@ const Portfolio = () => {
             caption: 'Uma solução de exercícios de fixação para escolas.',
             header: 'Tela de login.',
             link: 'https://quizzescola.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/quizz'
+            link2: '/portfolio/quizz'
         }, {
             src: coders0,
             altText: 'A rede social',
             caption: 'Rede social clone de Facebook.',
             header: 'Tela de login.',
             link: 'https://coders-seven.vercel.app/signin/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/coders'
+            link2: '/portfolio/coders'
         }
 
     ];
@@ -123,64 +123,58 @@ const Portfolio = () => {
     const [item, setItem] = useState(0);
 
 
+
     return (
 
         <StContainer >
 
             <Row>
                 <Col>
-                    <h2>Meus trabalhos </h2>
-
+                <br/>
+                    <h3>Meus trabalhos publicados ou em desenvolvimento </h3>
+<br/>
+                    <h4>
+                        {item + 1} - {items[item].caption || ''}
+                    </h4>
+                    <br/>
                     <p>
-                    {items[item].caption ||'/todo.jpg' }
-                        </p>
+                        {items[item].altText || ''}
+                    </p>
                 </Col>
             </Row>
 
 
             <Row>
                 <Col>
-                <img className="bigfoto" 
-                    
-                            onClick={()=>router.push(items[item].link2)}    
-                            
-                            src={items[item].src ||'/todo.jpg' }
-                            alt={ items[item].altText || '/todo.jpg'}
-                            />
 
+                    <FadeImage
+                        onClick={() => router.push(items[item].link2)}
+                        imagem={items[item].src || '/todo.jpg'}
+                        gradiente='8deg, rgba(13,9,6,0.66) 32%, rgba(254,252,252,0.26) 82%'
+                        link={items[item].link2}
+                        texto={items[item].altText}
+                        linkTexto={items[item].header}
+                    />
+
+            
                 </Col>
             </Row>
 
-            <Row className='d-flex'  >
-
-
+            <Row xs={2} md={3}  className='d-flex'  >
                 {items.map((item, i) => (
-                    <Col>
+                    <Col key={i}>
                         <div className="">
-                        <img className="imgPort " 
-                            onMouseEnter={()=> setItem(i)} 
-                            onClick={()=> setItem(i)}    
-                            // onMouseLeave={()=> setItem(-1)}
-                            src={item.src}
-                            alt={item.altText}
+                            <img className="imgPort "
+                                onMouseEnter={() => setItem(i)}
+                                onClick={() => setItem(i)}
+                                src={item.src}
+                                alt={item.altText}
                             />
-
-                            {/* {(<h3>{item.header}</h3>)} */}
-                            {/* {(<p>{item.caption}</p>)} */}
-                            {/* {(<a href={item.link}>Link da Aplicação</a>)} */}
-                            {/* {item.link2 ? RowCol(<a href={item.link2}>Detalhe da Aplicação:</a>) : ""} */}
                         </div>
-
                     </Col>
                 ))}
-
             </Row>
-
-
         </StContainer>
-
-
-
     )
 }
 
@@ -189,7 +183,7 @@ export default Portfolio
 const StContainer = styled(Container)`
 background:rgba(0, 0, 0, .51);
 margin-top: 20px;
-
+padding-top: 10px;
 
 .bigfoto{
     width: 100%;
@@ -200,21 +194,6 @@ margin-top: 20px;
     cursor: pointer;
 } 
 
-.imgPort{
-
-    width: 100%;
-    height: auto;
-    transition : 500ms;
-    filter: grayscale(1.5);
-
-    :hover {
-        transition : 500ms;
-        transform: scale(1.3, 1.3);
-        cursor: pointer;
-        filter: grayscale(0);
-    }
-
-}
 
 `
 

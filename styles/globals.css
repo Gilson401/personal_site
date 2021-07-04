@@ -44,3 +44,28 @@ a {
                                  
                }        
 } 
+
+
+    .responsive {
+                        width: 100%;
+                        height: auto;
+                        
+                    }
+
+                    
+.imgPort{
+
+    width: 100%;
+    height: auto;
+    transition : 500ms;
+    filter: grayscale(1.5);
+    margin-bottom: 10px;
+    
+
+}
+.imgPort:hover {
+        transition : 500ms;
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
+        filter: grayscale(0);
+    }

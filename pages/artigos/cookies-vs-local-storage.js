@@ -10,7 +10,7 @@ const Artigo10112020 = () => {
   return (
     <>
           <Head>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0" nonce="bnaw32cW"></script>
+          <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0" nonce="bnaw32cW"></script>
 
                 <link rel="canonical" href="https://gilsonpaulo.com.br/artigos/cookies-vs-local-storage" />
                 <title>Cookies vs Local Storage</title>

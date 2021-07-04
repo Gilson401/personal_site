@@ -23,7 +23,7 @@ const Artigo14112020 = () => {
     return (
         <>
             <Head>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0" nonce="bnaw32cW"></script>
+                <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0" nonce="bnaw32cW"></script>
                 <link rel="canonical" href={"https://gilsonpaulo.com.br/artigos/" + canonical} />
                 <title>{title}</title>
                 <meta name="description" content={descriptConten} />
