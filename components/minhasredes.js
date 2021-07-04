@@ -97,23 +97,7 @@ h1{
 
 
 
-.pulse {
- 
-    :hover{
-  animation: pulse-animation 2s infinite;
-    }
-}
 
-@keyframes pulse-animation {
-  0% {
-    /* box-shadow: 0 0 0 0px rgba(100, 0, 0, 0.2); */
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    /* box-shadow: 0 0 0 20px rgba(100, 0, 0, 0); */
-    transform: scale(1, 1);
-  }
-}
 
 
 `

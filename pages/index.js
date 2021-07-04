@@ -1,5 +1,3 @@
-
-
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
@@ -10,6 +8,7 @@ import Apresentacao from '../components/apresentacao.js'
 import Portfolio from '../components/carouselPortfolio.js';
 import NavDoApp from '../components/layout/nav/nav.js';
 import Minhasredes from '../components/minhasredes.js';
+import ContatoComponente from '../components/contatocomp.js';
 
 function Home() {
 
@@ -30,7 +29,7 @@ function Home() {
                 <Apresentacao />
                 <Portfolio />
                 <Minhasredes/>
-                
+                <ContatoComponente/>
             </StContainer>
 
         </>
@@ -44,6 +43,7 @@ export default Home;
 const StContainer = styled(Container)`
 
 
-
+font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 `

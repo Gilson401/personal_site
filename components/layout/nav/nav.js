@@ -34,7 +34,7 @@ function NavDoApp(props) {
                         alt={'android-chrome-192x192.png'}
                     />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="-navbar-nav" />
+                    <Navbar.Toggle className='custom-toggler' aria-controls="-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             {montarLinksDrop()}

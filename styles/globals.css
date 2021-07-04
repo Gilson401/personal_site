@@ -5,7 +5,7 @@ body {
   font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-    background: url('/media/backgroundplanet.jpg') no-repeat center center ; 
+    background: url('/media/backgroundplanet4.jpg') no-repeat center center ; 
     /* background: url('/media/bgpreto.jpg') no-repeat center center fixed;  */
 
     -webkit-background-size: cover;
@@ -19,6 +19,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  
 }
 
 * {
@@ -38,34 +39,75 @@ a {
     display: none !important;
     
     } 
-    .hidelarge {display : flex; 
-                justify-content:flex-end;
-                width:100% !important;
-                                 
-               }        
+    .hidelarge {
+        display : flex; 
+        justify-content:flex-end;
+        width:100% !important;
+    }        
 } 
 
 
-    .responsive {
-                        width: 100%;
-                        height: auto;
-                        
-                    }
+.responsive {
+width: 100%;
+height: auto;
+}
 
+.circulo{
+border-radius: 50%;
+border: solid 1px whitesmoke;
+}
                     
 .imgPort{
-
     width: 100%;
     height: auto;
     transition : 500ms;
     filter: grayscale(1.5);
     margin-bottom: 10px;
-    
-
 }
+
 .imgPort:hover {
         transition : 500ms;
         transform: scale(1.1, 1.1);
         cursor: pointer;
         filter: grayscale(0);
-    }
+}
+
+.darkbg{
+    background:rgba(0, 0, 0, .51);
+    margin: 10px auto 10px auto;
+    padding-bottom: 10px;
+}
+
+
+.pulseanim {
+    animation: pulse-animation 2s infinite;  
+}
+
+.pulse{
+    /* filter:grayscale(1.5); */
+    transition: 1s;
+    transform: scale(1, 1);
+}
+
+.pulse:hover{
+  animation: pulse-animation 2s infinite;
+  filter:grayscale(0);
+}
+
+@keyframes pulse-animation {
+  0% {
+    /* box-shadow: 0 0 0 0px rgba(100, 0, 0, 0.2); */
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    /* box-shadow: 0 0 0 20px rgba(100, 0, 0, 0); */
+    transform: scale(1, 1);
+  }
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-toggler{  border-color: white !important;} 

@@ -172,7 +172,7 @@ const Portfolio = () => {
                         </Col>
                         <Col>
 
-                            <Link href={props.link}>
+                            <Link  className='linkme' href={props.link}>
                                 {txt}
                             </Link> <br />
                             <br />
@@ -216,8 +216,8 @@ const Portfolio = () => {
                             <Col>
                                 {RowCol(<h3>{item.header}</h3>)}
                                 {RowCol(<p>{item.caption}</p>)}
-                                {RowCol(<a href={item.link}>Link da Aplicação</a>)}
-                                {item.link2 ? RowCol(<a href={item.link2}>Detalhe da Aplicação:</a>) : ""}
+                                {RowCol(<a className='linkme' href={item.link}>Link da Aplicação</a>)}
+                                {item.link2 ? RowCol(<a className='linkme' href={item.link2}>Detalhe da Aplicação</a>) : ""}
                             </Col>
                         </Row>
                     </SwiperSlide>
@@ -226,36 +226,6 @@ const Portfolio = () => {
             </Swiper>
 
 </Banner>
-
-            {/* =========================================================================== */}
-             {/* <Banner hidden={false} >
-                <Carousel >
-
-                    {items.map((item, i) => (
-
-
-                        <Carousel.Item key={item.toString()}>
-                            <Row>
-                                <img className="responsive"
-                                    // className="d-block w-100"
-                                    src={item.src}
-                                    alt={item.altText}
-                                />
-                            </Row>
-                            <Row>
-                                <Col>
-                                    {RowCol(<h3>{item.header}</h3>)}
-                                    {RowCol(<p>{item.caption}</p>)}
-                                    {RowCol(<a href={item.link}>Link da Aplicação</a>)}
-                                    {item.link2 ? RowCol(<a href={item.link2}>Detalhe da Aplicação:</a>) : ""}
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                    ))}
-
-                </Carousel>
-            </Banner> */}
-
             <br /><br /><br /><br />
 
             <PortItem
@@ -324,8 +294,14 @@ const BackBlack = styled.div`
  background-color:  rgba(10,10,10,0.7);
  border-radius: 5px;
  padding: 10px;
-
- .card {
+ .col{
+ a{
+ font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 20px;
+}
+ }
+    .card {
         width: 200px;
         height: 140px;
         background: url("/next.JPG") no-repeat;
@@ -345,6 +321,15 @@ const BackBlack = styled.div`
 
 const StContainer = styled(Container)`
 min-height:700px;
+
+.linkme{
+ font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 20px;
+}
+
+ 
+ 
 `
 
 const Banner = styled.div`

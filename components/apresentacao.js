@@ -9,7 +9,7 @@ const Apresentacao = () => {
             <Col className="hidelarge" >
 
                 <img
-                    className="d-block mx-auto responsive"
+                    className="d-block mx-auto responsive circulo"
                     src={'/media/eufoto.png'}
                     alt={'eufoto.png'}
                 />
@@ -23,10 +23,10 @@ const Apresentacao = () => {
                         Olá, eu sou Gilson Paulo, desenvolvedor web full-stack MERN.
                     </h1>
                     <br />
-                    <p>
-                        Eu faço sites e aplicações online para pessoas e empresas.  Trabalho com as tecnologias
-                        MongoDB, ExpressJS, React e NodeJS.
-                    </p>
+                    <h5>
+                        Eu faço sites e sistemas online para pessoas e empresas.  Trabalho com 
+                        <span> MongoDB, ExpressJS, React e NodeJS</span>.
+                    </h5>
 </div>
                 </Col>
 
@@ -101,6 +101,7 @@ export default Apresentacao
 
 const StContainer = styled(Container)`
 
+
 background: url('/media/bgpreto.jpg');
 padding-top: 20px;
 padding-bottom: 10px;
@@ -108,9 +109,13 @@ color:white;
 background:rgba(0, 0, 0, .51);
 font-family: Roboto;
 img{
-margin-bottom: 20px;
-padding-bottom: 10px;
+    margin-bottom: 20px;
+/* padding-bottom: 10px; */
 }
+span{
+    color: yellow;
+}
+
 h1{
     font-family: Roboto;
     font-weight: 700;

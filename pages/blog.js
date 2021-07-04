@@ -16,7 +16,7 @@ const Blog = () => {
             </Head>
       
 
-        <Container >
+        <StContainer className='darkbg' >
         <hr/>
 
 
@@ -114,12 +114,26 @@ const Blog = () => {
                 Em breve novos conteúdos.
             </p>
 
-        </Container>
+        </StContainer>
 
-        <style jsx>
-                {
-                    `
-                    .container {
+         </>
+
+    )
+}
+
+export default Blog
+
+const img2 = styled.img`
+  width: 100%;
+  height: auto;
+`
+
+
+const StContainer = styled(Container)`
+min-height: 70vh;
+padding-top: 30px;
+
+.container {
                         position: relative;
                         overflow: hidden;
                         width: 100%;
@@ -151,18 +165,14 @@ const Blog = () => {
                         
                     }
 
-                    `
-                }
-        </style> 
 
-        </>
-
-    )
+ul{
+li{
+    a{font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+font-size: 20px;
+}
+}
 }
 
-export default Blog
-
-const img2 = styled.img`
-  width: 100%;
-  height: auto;
 `

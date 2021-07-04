@@ -1,17 +1,15 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-
-
-
+import styled from 'styled-components';
 
 
 const LinksComponente = () => {
     return (
-        <Container>
+        <StContainer>
 
-            <p>
+            <h1>
                 Links úteis:
-            </p>
+            </h1>
 
             <hr />
 
@@ -25,8 +23,22 @@ const LinksComponente = () => {
             </ul>
 
 
-        </Container>
+        </StContainer>
     )
 }
 
 export default LinksComponente
+
+const StContainer = styled(Container)`
+min-height: 70vh;
+padding-top: 30px;
+ul{
+li{
+    a{font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+font-size: 20px;
+}
+}
+}
+
+`
