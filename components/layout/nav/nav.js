@@ -15,7 +15,9 @@ function NavDoApp(props) {
         { push: "/artigos", label: "ARTIGOS" },
         { push: "/links", label: "LINKS" },
         { push: "/portfolio", label: "PORTFOLIO" },
-        { push: "/contato", label: "CONTATO" }
+        { push: "/contato", label: "CONTATO" },
+        { push: "/testes", label: "TESTES" },
+        { push: "/admin", label: "ADMIN" }
     ]
 
 
