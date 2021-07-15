@@ -34,8 +34,8 @@ const Portfolio = () => {
     const items = [
         {
             src: academialogin,
-            altText: 'exemplo de tela de login com JsonWebToken',
-            caption: 'Featuring JsonWebToken',
+            altText: 'Sistema online para gestão de usuários, administradores, alunos, estagiários e professores',
+            caption: 'Sistema de gestão de usuários de academia',
             header: ' App Academia Login',
             link: 'https://front-app-academia.vercel.app/',
             link2: 'https://gilsonpaulo.com.br/portfolio/academia'
@@ -50,8 +50,8 @@ const Portfolio = () => {
         },
         {
             src: characterusercreate,
-            altText: 'formulário html feito em react',
-            caption: 'Bootstrap Form',
+            altText: 'Salve as informações de seus personagens de RPG.',
+            caption: 'Banco de dados de personagens',
             header: 'Character Usercreate Form',
             link: 'https://charactersdatabase.vercel.app/'
         },

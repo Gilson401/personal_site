@@ -160,7 +160,7 @@ const [state, setForm] = useState({
 
     return (
 
-        <Container className='darkbg'>
+        <StContainer className='darkbg'>
 
             <br />
             <h3>Vamos conversar! </h3>
@@ -171,7 +171,7 @@ const [state, setForm] = useState({
 
 
             <Row>
-                <Col xs="12" md="6" xl="4">
+                <Col xs="12" md="6" xl="6">
                     <form id='contact-form' onSubmit={handleSubmit} noValidate>
                         <br />
                         <Form.Control
@@ -237,10 +237,18 @@ const [state, setForm] = useState({
                     </form>
                 </Col>
 
+                <Col className="hidesmall">
+                <img className="responsive hidesmall"
+                                // className="d-block w-100"
+                                src={'/media/correio.jpg'}
+                                alt={'correio'}
+                            />
+                </Col>
+
             </Row>
   
   
-        </Container >
+        </StContainer >
     )
 }
 
@@ -250,14 +258,16 @@ const [state, setForm] = useState({
 export default ContatoComponente
 
 
-const Pulsante = styled.div`
-#box {
-  background:gray;
-  animation:pulse 0.5s infinite alternate;
-}
-
-@keyframes pulse {
-  from { box-shadow:0px 0px 10px 3px white; }
-  to { box-shadow:0px 0px 10px 3px green; }
-}
+const StContainer = styled(Container)`
+@media screen and (max-width: 600px) {
+    .hidesmall {
+    display: none !important;
+    
+    } 
+    .hidelarge {
+        display : flex; 
+        justify-content:flex-end;
+        width:100% !important;
+    }        
+} 
 `

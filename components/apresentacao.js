@@ -20,11 +20,11 @@ const Apresentacao = () => {
                 <Col className="d-flex"  xs={12} md={8} >
                 <div className='my-auto'>
                     <h1>
-                        Olá, eu sou Gilson Paulo, desenvolvedor web full-stack MERN.
+                        Olá, eu sou Gilson Paulo. Eu sou desenvolvedor web full-stack MERN.
                     </h1>
                     <br />
                     <h5>
-                        Eu faço sites e sistemas online para pessoas e empresas.  Trabalho com 
+                        Eu faço <span>sites e sistemas online</span> para pessoas e empresas.  Trabalho com 
                         <span> MongoDB, ExpressJS, React e NodeJS</span>.
                     </h5>
 </div>
@@ -49,7 +49,7 @@ const Apresentacao = () => {
                         Por que contratar-me?
                     </h1>
                     <p>
-                        Porque, para mim, fazer um site não é apenas codificar e colocar a página no ar. Acredito que é preciso entender a necessidade do cliente
+                        Porque fazer um site não é apenas codificar e colocar a página no ar. Acredito que é preciso entender a necessidade do cliente
                         e entregar o resultado que supere suas expectativas.
                     </p>
                     <p>

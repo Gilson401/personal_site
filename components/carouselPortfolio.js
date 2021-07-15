@@ -30,7 +30,7 @@ const Portfolio = () => {
     const items = [
         {
             src: '/media/arquitetarDrone.JPG',
-            altText: 'empresa de imagens aéreas feitas com drone',
+            altText: 'Imagens aéreas feitas com drone',
             caption: 'Site institucional da Arquitetar Drone.',
             header: ' Arquitetar Drone',
             link: 'https://drone.d2slm6rnoh5c4n.amplifyapp.com/',
@@ -38,41 +38,42 @@ const Portfolio = () => {
         },
         {
             src: academialogin,
-            altText: 'exemplo de tela de login com JsonWebToken',
-            caption: 'Featuring JsonWebToken',
+            altText: 'Sistema de gerenciamento de usuários de academia fitness.',
+            caption: 'App Academia',
             header: ' App Academia Login',
             link: 'https://front-app-academia.vercel.app/',
             link2: '/portfolio/academia'
         },
         {
             src: characterusercreate,
-            altText: 'formulário html feito em react',
-            caption: 'Bootstrap Form',
-            header: 'Character Usercreate Form',
+            altText: 'Armazene os dados de seus personagens de RPG.',
+            caption: 'Characters Database',
+            header: 'Character Database',
             link: 'https://charactersdatabase.vercel.app/',
             link2: '/portfolio/characters'
         },
 
         {
             src: cms6,
-            altText: 'CMS contendo Emailjs',
-            caption: 'Área de contato. O proprietário recebe um email de contato diretamente do site.',
-            header: 'Form de contato com lib Emailjs .',
+            altText: `Sistema desenvolvido e programado para a gestão de uma parte ou de 
+            toda a informação contida dentro de uma página na Web. `,
+            caption: 'Content Management System',
+            header: 'Content Management System .',
             link: 'https://front-gluten-free.vercel.app/',
             link2: '/portfolio/cms'
         },
         {
             src: quizz0,
-            altText: 'Quizz escolar',
-            caption: 'Uma solução de exercícios de fixação para escolas.',
-            header: 'Tela de login.',
+            altText: 'Uma solução de exercícios de fixação para escolas.',
+            caption: 'Quizz escolar',
+            header: 'Testes seus conhecimentos',
             link: 'https://quizzescola.vercel.app/',
             link2: '/portfolio/quizz'
         }, {
             src: coders0,
-            altText: 'A rede social',
-            caption: 'Rede social clone de Facebook.',
-            header: 'Tela de login.',
+            altText: 'Rede social clone de Facebook pensada para desenvolvedores devs.',
+            caption: 'A rede social',
+            header: 'A rede social.',
             link: 'https://coders-seven.vercel.app/signin/',
             link2: '/portfolio/coders'
         }

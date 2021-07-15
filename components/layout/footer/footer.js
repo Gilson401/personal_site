@@ -164,7 +164,7 @@ function Footer() {
     margin-top: 20px;
    background-color: #797a7e;
    width: 100%;
-   min-height: 20vh;
+   min-height: 240px;
    color: white;
    background: rgb(20,26,40);
 background: linear-gradient(90deg, rgba(20,26,40,1) 0%, rgba(56,78,136,1) 53%, rgba(112,128,144,1) 100%);

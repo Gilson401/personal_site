@@ -6,7 +6,6 @@ import styled from 'styled-components';
 /**props: imagem, gradiente, link, texto, linkTexto */
 const FadeImage = ({ imagem, gradiente, link, texto, linkTexto }) => {
 
-    // const { imagem, gradiente, link, texto, linkTexto } = props
     
     const rgradiente = `linear-gradient(${gradiente})`
     
@@ -29,10 +28,10 @@ const FadeImage = ({ imagem, gradiente, link, texto, linkTexto }) => {
                 
                 <div className="overlay">
                     <div className="text">
-                        <p
-                        >{texto || 'Defina o texto'}</p>
-                        {/* <p><a href={link}> {linkTexto || "Defina linkTexto"} </a> </p> */}
                         <a href={link}> {linkTexto || "Defina linkTexto"} </a>
+                       <p>{texto || 'Defina o texto'}</p>
+
+                      
                     </div>
 
                 </div>
