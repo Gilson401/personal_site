@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import styled from 'styled-components';
 import Link from 'next/link'
-
-import { Carousel, Col, Row, Container } from 'react-bootstrap'
-
-
+import {  Col, Row, Container } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useRouter } from 'next/router'
 
 // Import Swiper React components
 import SwiperCore, {
@@ -21,7 +18,7 @@ SwiperCore.use([Pagination,Navigation]);
 
 const Portfolio = () => {
 
-
+    const router = useRouter()
     const academialogin = '/media/academialogin.JPG'
     const academiausercreate = '/media/academiausercreate.JPG'
     const characterusercreate = '/media/charactersusercreate.JPG'
@@ -33,12 +30,19 @@ const Portfolio = () => {
     const [coders0, coders1] = ['/media/coders0.PNG', '/media/coders1.PNG']
     const items = [
         {
+            src: '/media/droneproject0.JPG',
+            altText: 'Site institucional',
+            caption: 'Site institucional deempresa de imagens aéreas com drone.',
+            header: ' Arquitetar Drone',
+            link: 'https://arquitetardrone.com.br/',
+            linkInterno: '/portfolio/arquitetardrone'
+        },{
             src: academialogin,
             altText: 'Sistema online para gestão de usuários, administradores, alunos, estagiários e professores',
             caption: 'Sistema de gestão de usuários de academia',
             header: ' App Academia Login',
             link: 'https://front-app-academia.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/academia'
+            linkInterno: '/portfolio/academia'
         },
         {
             src: academiausercreate,
@@ -46,7 +50,7 @@ const Portfolio = () => {
             caption: 'React useState',
             header: 'User Create Form',
             link: 'https://front-app-academia.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/academia'
+            linkInterno: '/portfolio/academia'
         },
         {
             src: characterusercreate,
@@ -77,7 +81,7 @@ const Portfolio = () => {
             caption: 'CMS: Carousel Customizado.',
             header: 'Display dos itens vendidos pelo estabelecimento.',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: cms2,
@@ -85,7 +89,7 @@ const Portfolio = () => {
             caption: 'CMS',
             header: 'Projeto mais recente CMS para produtos alimentícios.',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: cms3,
@@ -93,7 +97,7 @@ const Portfolio = () => {
             caption: 'Decida o que seus clientes vão ver na tela inicial',
             header: 'Landing Page  customizável.',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: cms4,
@@ -101,7 +105,7 @@ const Portfolio = () => {
             caption: 'Área de admin com dashboard com diversos forms para cadastro dos itens.',
             header: 'Projeto mais recente CMS para produtos alimentícios.',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: cms5,
@@ -109,7 +113,7 @@ const Portfolio = () => {
             caption: 'Área de listagem de todos os produtos com detalhes de preço.',
             header: 'Relação de produtos.',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: cms6,
@@ -117,7 +121,7 @@ const Portfolio = () => {
             caption: 'Área de contato. O proprietário recebe um email de contato diretamente do site.',
             header: 'Form de contato com lib Emailjs .',
             link: 'https://front-gluten-free.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/cms'
+            linkInterno: '/portfolio/cms'
         },
         {
             src: quizz0,
@@ -125,21 +129,21 @@ const Portfolio = () => {
             caption: 'Uma solução de exercícios de fixação para escolas.',
             header: 'Tela de login.',
             link: 'https://quizzescola.vercel.app/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/quizz'
+            linkInterno: '/portfolio/quizz'
         }, {
             src: coders0,
             altText: 'A rede social',
             caption: 'Rede social clone de Facebook.',
             header: 'Tela de login.',
             link: 'https://coders-seven.vercel.app/signin/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/coders'
+            linkInterno: '/portfolio/coders'
         }, {
             src: coders1,
             altText: 'A rede social',
             caption: 'Rede social clone de Facebook.',
             header: 'Tela de feed.',
             link: 'https://coders-seven.vercel.app/signin/',
-            link2: 'https://gilsonpaulo.com.br/portfolio/coders'
+            linkInterno: '/portfolio/coders'
         }
 
     ];
@@ -217,7 +221,9 @@ const Portfolio = () => {
                                 {RowCol(<h3>{item.header}</h3>)}
                                 {RowCol(<p>{item.caption}</p>)}
                                 {RowCol(<a className='linkme' href={item.link}>Link da Aplicação</a>)}
-                                {item.link2 ? RowCol(<a className='linkme' href={item.link2}>Detalhe da Aplicação</a>) : ""}
+                                {item.linkInterno ? RowCol(
+                                <p className='linkme' onClick={()=>router.push(item.linkInterno)}>Detalhe da Aplicação</p>
+                                ) : ""}
                             </Col>
                         </Row>
                     </SwiperSlide>
@@ -228,6 +234,13 @@ const Portfolio = () => {
 </Banner>
             <br /><br /><br /><br />
 
+            <PortItem
+                srcimage={"/droneproject0.JPG"}
+                link={"/portfolio/arquitetardrone"}
+                linktext={"Site institucional Arquitetar Drone."}
+                brief={`Site de empresa de imagens aéreas. Design por Kin Brand. Responsivo.`}
+            />
+<br />
             <PortItem
                 srcimage={"/coders0.PNG"}
                 link={"/portfolio/coders"}
@@ -294,13 +307,7 @@ const BackBlack = styled.div`
  background-color:  rgba(10,10,10,0.7);
  border-radius: 5px;
  padding: 10px;
- .col{
- a{
- font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 20px;
-}
- }
+
     .card {
         width: 200px;
         height: 140px;
@@ -326,6 +333,7 @@ min-height:700px;
  font-family:Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,  Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 20px;
+    cursor: pointer;
 }
 
  

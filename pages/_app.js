@@ -12,6 +12,8 @@ import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
 import Layout from '../components/layout/layout'
 import Head from 'next/head';
+
+import '../styles/globals.scss'
 import '../styles/globals.css'
 
 // Import Swiper styles

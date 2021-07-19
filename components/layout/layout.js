@@ -75,7 +75,7 @@ box-sizing: border-box;
 padding: 30px 30px 30px 30px;
 }
 
-a{   
+/* a{   
 width: 36px;
 height: 27px;
 font-family: Montserrat;
@@ -86,7 +86,7 @@ line-height: 27px;
 color: #FFFFFF;
 margin: 0 20px 0 20px;
 text-decoration: none;
-}
+} */
 
 .links{
 padding-bottom:20px;

@@ -23,51 +23,42 @@ const descriptConten = ""
 
             <Container> 
             <br/>
-<h1> TODO DRONE </h1>
+<h1> Arquitetar Drone </h1>
 
-<ResponsiveIframe url="https://www.youtube.com/embed/zcb-qTlW2fA"/>
+<br/>
+
+<ResponsiveIframe url="https://www.youtube.com/embed/JwAzGyzx7dw"/>
 <br/>
 <br/>
-<h1>TODO DRONE</h1>
-<p></p>
 
-<p>.</p>
+<p>Este projeto é o site institucional da empresa Arquitetar Drone. Feito com o framework NextJs e hospedado na Hostgator.</p>
 
-<p></p>
+<p>Possui quatro páginas: Home, Sobre, Portfólio e Contato.  </p>
 
-<ul>
-    <li>Banner em carrossel para exibição dos destaques.</li>
-   
-</ul>
+<p>Site responsivo.</p>
 
-<p></p>
+<p>Botão para contato por Zap</p>
 
-<p></p>
+<p>Design feito por <a href="https://kindesigner.com/" target="_blank" > Kin Brand</a> </p>
 
+<p>Link em produção <a href="https://arquitetardrone.com.br/" target="_blank" > Arquitetar Drone</a> </p>
 
 <br/>
 <h3>Dependências: </h3>
 <br/>
 <p> 
-    "bootstrap": "^4.5.2",<br/>
-    "emailjs-com": "^2.6.3",<br/>
-    "node-sass": "^4.14.1",<br/>
-    "react": "^16.13.1",<br/>
-    "react-bootstrap": "^1.3.0",<br/>
-    "react-dom": "^16.13.1",<br/>
-    "react-helmet": "^6.1.0",<br/>
+    "bootstrap": "^4.5.3",<br/>
+    "emailjs-com": "2.6.3",<br/>
+    "next": "10.2.3",<br/>
+    "react": "17.0.2",<br/>
+    "react-bootstrap": "^1.6.0",<br/>
+    "react-dom": "17.0.2",<br/>
     "react-icons": "^3.11.0",<br/>
-    "react-intl-currency-input": "^0.2.5",<br/>
-    "react-loader-spinner": "^3.1.14",<br/>
-    "react-redux": "^7.2.2",<br/>
-    "react-router-dom": "^5.2.0",<br/>
-    "react-scripts": "^3.4.4",<br/>
     "react-share": "^4.3.1",<br/>
-    "redux": "^4.0.5",<br/>
-    "redux-multi": "^0.1.12",<br/>
-    "redux-thunk": "^2.3.0",<br/>
-    "styled-components": "^5.2.0",<br/>
-    "sweetalert2": "^10.6.1"<br/>
+    "sass": "^1.35.1",<br/>
+    "styled-components": "^5.3.0",<br/>
+    "sweetalert2": "^10.16.9",<br/>
+    "swiper": "^6.7.1"<br/>
 </p>
 
 <br/>
