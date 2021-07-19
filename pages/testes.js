@@ -1,5 +1,9 @@
 
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
+import styled from 'styled-components'
+
+
+
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
@@ -19,26 +23,41 @@ export async function getStaticProps() {
     }
 }
 
-// posts will be populated at build time by getStaticProps()
+import useSWR from 'swr'
 function Testes({ posts, posts2 }) {
+
+    // const fetcher = url => fetch(url).then(res => res.json())
+    // const randn = 'https://localhost:3005/opcoesatm'
+    // const { data, error } = useSWR(randn, fetcher)
+
+    // const FetcheUseSWR = () => {
+
+    //     return (
+    //         <>
+    //             {error ? <div>failed to load</div> : ""}
+    //             {!data ? <div>loading...</div> :
+    //                 <Row sm={4}>
+    //                     {data.map((item, key) => <Col key={key}> {item.optTicker} - {item.data}</Col>)}
+    //                 </Row>
+    //             }
+    //         </>
+    //     )
+    // }
+
+const showDetails =(e) =>{
+    
+    console.log(e)
+}
     return (
+        <TestContainer onClick={showDetails}>
 
-        <Container>
-            <Row>
-                <Col>
-                <p>Testando getStaticProps</p>
-                <p>O Site é estático mas pode fazer data fetch no servidor e entregar os dados novos? 
-                    <p>Se funciona, as mensagens abaixo devem mudar a cada refresh na versão de produção</p>
-                </p>
-                    <h3>{posts.joke}</h3>
-                    <hr />
-                    <h3>{posts2.joke}</h3>
-
-                </Col>
-            </Row>
-        </Container>
-    )
+ 
+        </TestContainer>
+                )
 }
 
+                export default Testes
 
-export default Testes
+                const TestContainer = styled(Container)`
+  
+                `

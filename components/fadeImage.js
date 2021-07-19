@@ -14,9 +14,9 @@ const FadeImage = ({ imagem, gradiente, link, texto, linkTexto }) => {
 
     const handleImageLoad = (event) => {
         console.log("client  ", event.target.clientWidth ,  event.target.clientHeight)
-        console.log("natural ", event.target.naturalWidth , event.target.naturalHeight )
-        setRefer(event.target)  
-        console.log("inputEl", inputEl.current.naturalWidth )      
+        // console.log("natural ", event.target.naturalWidth , event.target.naturalHeight )
+        // setRefer(event.target)  
+        // console.log("inputEl", inputEl.current.naturalWidth )      
     }
 
 
@@ -30,8 +30,7 @@ const FadeImage = ({ imagem, gradiente, link, texto, linkTexto }) => {
                     <div className="text">
                         <a href={link}> {linkTexto || "Defina linkTexto"} </a>
                        <p>{texto || 'Defina o texto'}</p>
-
-                      
+                     
                     </div>
 
                 </div>
