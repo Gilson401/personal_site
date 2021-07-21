@@ -1,3 +1,19 @@
 .portAppLink{
     color: red;
 }
+
+.bordme-red{
+    border: solid red 1px;
+}
+
+.norte{    display: flex;    justify-content:center;      align-items:flex-start;  }
+.nordeste{ display: flex;    justify-content:flex-end;    align-items:flex-start;  }
+.leste{    display: flex;    justify-content:flex-end;    align-items:center;    }
+.sudeste{  display: flex;    justify-content: flex-end;   align-items:flex-end ;  }
+.sul{      display: flex;    justify-content: center;     align-items:flex-end ;  }
+.sudoeste{ display: flex;    justify-content: flex-start; align-items:flex-end ;  }
+.oeste{    display: flex;    justify-content:flex-start;  align-items:center;  }
+.noroeste{ display: flex;    justify-content:flex-start;  align-items:flex-start;  }
+.centro{   display: flex;    justify-content:center;      align-items:center;  }
+.espaco-igual-envolto{  display: flex;   justify-content: space-around;   }
+.espaco-maximo-entre{  display: flex;   justify-content: space-between;   }

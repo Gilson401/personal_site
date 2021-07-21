@@ -11,8 +11,8 @@ function NavDoApp(props) {
 
     const mainLinks = [
         { push: "/", label: "HOME" },
-        { push: "/blog", label: "BLOG" },
-        { push: "/artigos", label: "ARTIGOS" },
+        // { push: "/blog", label: "BLOG" },
+        { push: "/sobre", label: "SOBRE" },
         { push: "/links", label: "LINKS" },
         { push: "/portfolio", label: "PORTFOLIO" },
         { push: "/contato", label: "CONTATO" },
