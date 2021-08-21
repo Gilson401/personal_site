@@ -13,11 +13,10 @@ function NavDoApp(props) {
         { push: "/", label: "HOME" },
         // { push: "/blog", label: "BLOG" },
         { push: "/sobre", label: "SOBRE" },
-        { push: "/links", label: "LINKS" },
+        { push: "/links", label: "LINKS" }, 
         { push: "/portfolio", label: "PORTFOLIO" },
         { push: "/contato", label: "CONTATO" },
-        // { push: "/testes", label: "TESTES" },
-        
+        // { push: "/testes", label: "TESTES" },        
     ]
 
 

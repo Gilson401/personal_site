@@ -1,16 +1,47 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Carousel, Col, Row, Container, Table} from 'react-bootstrap'
+import { Col, Row, Container, Table } from 'react-bootstrap'
 const Sobre = () => {
 
 
     return (
 
         <StContainer>
-<h3>Conheça um pouco mais sobre mim.</h3>
-<br/>
+            <h3>Conheça um pouco mais sobre mim.</h3>
+            <br />
+
+            <Row>
+
+
+                <Col>
+                    <p> Desde agosto de 2021 sou parte do time de desenvolvedores front-end da   <a className="image " href="https://www.investfy.com/" target="_blank" >Investfy</a>.  Lá utilizo o framework
+                        <a href="https://vuejsbr-docs-next.netlify.app/" target="_blank" > Vuejs </a>
+
+                        e a biblioteca de estilo  <a href="https://tailwindcss.com/" target="_blank" > Tailwind </a>. Lá adquiri e aplico conhecimentos de <span className="underline">métodos ágeis e clean code</span>. 
+
+                    </p>
+                </Col>
+
+                <Col sm={4}>
+
+                    <div className="centro espaco-igual-envolto">
+         
+                        <img className="image"
+                            src={'https://vuejsbr-docs-next.netlify.app/logo.png'}
+                            alt={'Ify'}
+                        />
+                        <img className="image"
+                            src={'https://symbols.getvecta.com/stencil_97/3_tailwind-css-icon.43c02f69bf.png'}
+                            alt={'Tailwind'}
+                        />
+                    </div>
+                </Col>
+
+            </Row>
+            <br />
             <Row>
                 <Col>
+                <h4>Voltando um pouco no meu histórico. </h4>
                     <p>
                         Profissional com 16 anos de carreira na área de logística de combustíveis da Br Distribuidora, em transição de para área de Tecnologia,
                         com curso Bootcamp MERN concluído no Instituto Infnet de Tecnologia. Tenho vários projetos publicados na área,
@@ -18,7 +49,9 @@ const Sobre = () => {
                     </p>
                 </Col>
             </Row>
-            <br/>
+
+            
+            <br />
             <Row>
                 <Col className='oeste'>
                     <div>
@@ -31,7 +64,7 @@ const Sobre = () => {
                 </Col>
 
                 <Col sm={4}>
-                    <img className="responsive hidesmall"
+                    <img className="responsive "
                         src={'/media/talentoglog.jpg'}
                         alt={'talento glog'}
                     />
@@ -39,12 +72,12 @@ const Sobre = () => {
 
             </Row>
 
-            <br/>
-            {/* segundo */}
+            <br />
+
             <Row>
 
                 <Col sm={4}>
-                    <img className="responsive hidesmall"
+                    <img className="responsive "
                         src={'/media/batalha.jfif'}
                         alt={'talento glog'}
                     />
@@ -57,17 +90,16 @@ const Sobre = () => {
                             Antes do VBA eu fazia algumas coisas em programação. Aprendi sozinho a IDE Unity3d pois queria
                             aprender como fazer jogos para celular.
                             <br />
-                            Publiquei jogos na loja de apps do Google como o Militonto (game com sátira política), Matemática (jogo educativo)
+                            Publiquei jogos na loja de apps do Google como o Militonto (game com sátira política), Matemática (jogo educativo) e
                             Palpite (gerador de números aleatórios).
+                            <br/>
+                            Estes jogos foram feitos utilizando a linguagem c#.
                         </p>
                     </div>
                 </Col>
-
-
-
             </Row>
-            <br/>
-            {/* terceiro */}
+            <br />
+
             <Row >
                 <Col className='oeste'>
                     <div>
@@ -75,44 +107,45 @@ const Sobre = () => {
                             Desenvolvi e plubliquei vários projetos para o curso. Também fiz alguns projetos pessoais como o site da consluora Daniela Nascimento,
                             projetos pessoais voltados para investimentos na bolsa. No curso eu aprendi:
                         </p>
-                            <Table  borderless>
-                                <tr>
-                                   
-                                </tr>
-                                <tr>
-                                    <td>Javascript,  CSS, HTML</td>
-                                    <td>NodeJs</td>
-                                    <td>Redux</td>
-                                </tr>
+                        <Table borderless>
+                            <tr>
 
-                                <tr>
-                                    <td>Mongodb Database</td>
-                                    <td>Servidor ExpressJs</td>
-                                    <td>GitHub e GitLab</td>
-                                </tr>
+                            </tr>
 
+                            <tr>
+                                <td>Javascript,  CSS, HTML</td>
+                                <td>NodeJs</td>
+                                <td>Redux</td>
+                            </tr>
 
-                                <tr>
-                                    <td>Amazon S3</td>
-                                    <td>Bootstrap</td>
-                                    <td>Testes JEST</td>
-                                </tr>
-
-                                <tr>
-                                    <td>ReactJS</td>
-                                    <td>Postmann</td>
-                                    <td>Autenticação JWT</td>
-                                </tr>
-
-                            </Table>
+                            <tr>
+                                <td>Mongodb Database</td>
+                                <td>Servidor ExpressJs</td>
+                                <td>GitHub e GitLab</td>
+                            </tr>
 
 
-                        
+                            <tr>
+                                <td>Amazon S3</td>
+                                <td>Bootstrap</td>
+                                <td>Testes JEST</td>
+                            </tr>
+
+                            <tr>
+                                <td>ReactJS</td>
+                                <td>Postmann</td>
+                                <td>Autenticação JWT</td>
+                            </tr>
+
+                        </Table>
+
+
+
                     </div>
                 </Col>
 
                 <Col className='leste' sm={4}>
-                    <img className="responsive hidesmall"
+                    <img className="responsive "
                         src={'/media/infnet.png'}
                         alt={'talento glog'}
                     />
@@ -120,12 +153,11 @@ const Sobre = () => {
 
             </Row>
 
-            {/* quarto */}
-            <br/>
+            <br />
             <Row>
 
                 <Col sm={4}>
-                    <img className="responsive hidesmall"
+                    <img className="responsive "
                         src={'/media/arquitetarDrone.JPG'}
                         alt={'talento glog'}
                     />
@@ -133,14 +165,18 @@ const Sobre = () => {
 
                 <Col className='leste'>
                     <div>
-                        
+
                         <p>
-                            Meu trabalho mais recente é o site institucional da <a href="https://arquitetardrone.com.br/" target="_blank" > Arquitetar Drone</a>. O desenho foi feito por 
+                            Meu trabalho freelancer mais recente é o site institucional da <a href="https://arquitetardrone.com.br/" target="_blank" > Arquitetar Drone</a>. O desenho foi feito por
                             <a href="https://kindesigner.com/" target="_blank" > Kin Brand</a>. Utiliza o framework NextJS.
                         </p>
                     </div>
                 </Col>
             </Row>
+
+
+
+
         </StContainer>
     )
 }
@@ -148,6 +184,9 @@ const Sobre = () => {
 
 export default Sobre
 const StContainer = styled(Container)`
+.underline{
+    text-decoration: solid underline #fb8500;
+}
 
 .tabela{
     width: 100%;
@@ -171,10 +210,10 @@ a{
 }
 
 .image {
-  display: block;
-  width: 100%;
-  height: 230px;
-  border: 3px blue solid;
+  /* display: block; */
+  width: 33%;
+  margin-right: 5px;
+  height: 110px;
 }
 
 .overlay {
