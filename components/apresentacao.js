@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Container, Col, Row } from 'react-bootstrap';
 
 const Apresentacao = () => {
+
+    const techImages = ['vue.jpg', 'nuxt.jpg', 'mongow.jpg', 'expressw.jpg', 'reactw.jpg', 'nodew.jpg']
+
     return (
         <StContainer >
 
@@ -13,21 +16,21 @@ const Apresentacao = () => {
                     src={'/media/eufoto.png'}
                     alt={'eufoto.png'}
                 />
-                
+
             </Col>
-            
+
             <Row >
-                <Col className="d-flex"  xs={12} md={8} >
-                <div className='my-auto'>
-                    <h1>
-                        Olá, eu sou Gilson Paulo. Eu sou desenvolvedor web full-stack MERN.
-                    </h1>
-                    <br />
-                    <h5>
-                        Eu faço <span>sites e sistemas online</span> para pessoas e empresas.  Trabalho com 
-                        <span> MongoDB, ExpressJS, React e NodeJS</span>.
-                    </h5>
-</div>
+                <Col className="d-flex" xs={12} md={8} >
+                    <div className='my-auto'>
+                        <h1>
+                            Olá, eu sou Gilson Paulo. Eu sou desenvolvedor web full-stack MERN + VueJS e NuxtJS.
+                        </h1>
+                        <br />
+                        <h5>
+                            Eu faço <span>sites e sistemas online</span> para pessoas e empresas.  Trabalho com 
+                            <span> VueJS, NuxtJS, MongoDB, ExpressJS, React e NodeJS</span>.
+                        </h5>
+                    </div>
                 </Col>
 
                 <Col className="hidesmall" >
@@ -45,50 +48,48 @@ const Apresentacao = () => {
             <Row>
                 <Col className="d-flex" xs={12}>
                     <div className='my-auto'>
-                    <h1 >
-                        Por que contratar-me?
-                    </h1>
-                    <p>
-                        Porque fazer um site não é apenas codificar e colocar a página no ar. Acredito que é preciso entender a necessidade do cliente
-                        e entregar o resultado que supere suas expectativas.
-                    </p>
-                    <p>
-                        Um outro diferencial são as tecnologias que eu utilizo: MongoDB, ExpressJS, React e NodeJS. Consideradas mais
-                        modernas em suas áreas, elas dão flexibilidade ao desenvolvedor.
-                    </p>
+                        <h1 >
+                            Por que contratar-me?
+                        </h1>
+                        <p>
+                            Possuo experiência formal como desenvolvedor web Front-End Jr. iniciando em agosto de 2021 até o momento. Trabalhei com
+                            os frameworks VueJS, NuxtJS e libs como Vuex, Highcharts, TailwindCSS entre outras.
+                        </p>
+                        
+                        <p>
+                            Experiência em versionamento de código com GIT usando Github. Também possuo experiência em 
+                            rotinas ágeis como SCRUM.
+                        </p>
+
+                        <p>
+                            Tenho experiência anterior de 16 anos como assistente admiistrativo da antiga Br Distribuidora, hoje Vibra Energia.
+                            Embora eu seja jr como desenvolvedor, considero-me com maturidade profissional e emocional para a atividade.
+                        </p>
+
+                        <p>
+                            Disponibilidade para trabalho presencial no Rio de Janeiro, remoto, híbrido, contratos PJ ou CLT.
+                        </p>
+
+                        <p>
+                            Um outro diferencial são as tecnologias que eu utilizo: MongoDB, ExpressJS, React e NodeJS. Consideradas mais
+                            modernas em suas áreas, elas dão flexibilidade ao desenvolvedor.
+                        </p>
+
                     </div>
                 </Col>
             </Row>
 
-            <Row xs={6} md={12}  >
-                <Col className="d-flex " xs={6}  md={3}>
-                    <img
-                        className="d-block w-100 my-auto"
-                        src={'/media/mongow.jpg'}
-                        alt={'mongo.png'}
-                    />
-                </Col>
-                <Col className="d-flex " xs={6}  md={3}>
-                    <img
-                        className=" w-100 my-auto"
-                        src={'/media/expressw.jpg'}
-                        alt={'express.png'}
-                    />
-                </Col>
-                <Col className="d-flex " xs={6}  md={3}>
-                    <img
-                        className="d-block w-100 my-auto "
-                        src={'/media/reactw.jpg'}
-                        alt={'react.png'}
-                    />
-                </Col>
-                <Col className="d-flex " xs={6}  md={3}>
-                    <img
-                        className="d-block w-100 my-auto"
-                        src={'/media/nodew.jpg'}
-                        alt={'node.png'}
-                    />
-                </Col>
+            <Row xs={6} md={12} className="flex-gap">
+
+                {techImages.map(item => (
+
+                    <Col key={item} className="d-flex mb-3" xs={6} md={3}>
+                        <img
+                            className="d-block w-100 my-auto"
+                            src={'/media/' + item}
+                            alt={item}
+                        />
+                    </Col>))}
 
             </Row>
 

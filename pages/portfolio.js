@@ -2,17 +2,17 @@ import React from 'react'
 
 import styled from 'styled-components';
 import Link from 'next/link'
-import {  Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useRouter } from 'next/router'
 
 // Import Swiper React components
 import SwiperCore, {
-    Pagination,Navigation
-  } from 'swiper/core';
+    Pagination, Navigation
+} from 'swiper/core';
 
 
-SwiperCore.use([Pagination,Navigation]);
+SwiperCore.use([Pagination, Navigation]);
 
 //https://medium.com/makers-byte/the-25-best-personal-portfolio-website-design-inspiration-examples-e2eb1c8734df
 
@@ -28,15 +28,31 @@ const Portfolio = () => {
         '/media/cms5.JPG', '/media/cms6.JPG']
     const [quizz0] = ['/media/quizz0.PNG']
     const [coders0, coders1] = ['/media/coders0.PNG', '/media/coders1.PNG']
-    const items = [
+    const carrouselItems = [
+        {
+            src: '/media/vue3TypescriptPinia.PNG',
+            altText: 'Typescript Vue3',
+            caption: 'Demonstração de Vue3 + Typescript.',
+            header: ' Hello Vue3, Pinia and Tyescript',
+            link: 'https://vue-pinia-typescript.netlify.app/',
+            linkInterno: '/portfolio/vueTypescriptPinia'
+        },
+        {
+            src: '/media/daniela-consultora.jpg',
+            altText: 'Site institucional',
+            caption: 'Site institucional da consultora Daniela Nascimento.',
+            header: ' Arquitetar Drone',
+            link: 'https://www.daniestiloeimagem.com.br/',
+            linkInterno: '/portfolio/daniela'
+        },
         {
             src: '/media/droneproject0.JPG',
             altText: 'Site institucional',
-            caption: 'Site institucional deempresa de imagens aéreas com drone.',
+            caption: 'Site institucional de empresa de imagens aéreas com drone.',
             header: ' Arquitetar Drone',
             link: 'https://arquitetardrone.com.br/',
             linkInterno: '/portfolio/arquitetardrone'
-        },{
+        }, {
             src: academialogin,
             altText: 'Sistema online para gestão de usuários, administradores, alunos, estagiários e professores',
             caption: 'Sistema de gestão de usuários de academia',
@@ -165,10 +181,8 @@ const Portfolio = () => {
         const txt = props.linktext
         return (
 
-
             <>
                 <BackBlack>
-
 
                     <Row >
                         <Col xs="12" md="3">
@@ -176,12 +190,14 @@ const Portfolio = () => {
                         </Col>
                         <Col>
 
-                            <Link  className='linkme' href={props.link}>
+                            <Link className='linkme d-block' href={props.link} target="_blank">
                                 {txt}
-                            </Link> <br />
-                            <br />
-                            {props.brief}
+                            </Link>
 
+                            <p className="mt-3">
+
+                                {props.brief}
+                            </p>
 
                         </Col>
                     </Row>
@@ -195,44 +211,59 @@ const Portfolio = () => {
 
             <h2>Portfolio </h2>
 
-            <p>Projetos desenvolvidos com Reactjs, Mongodb, Nodejs, Expressjs</p>
+            <p>Projetos desenvolvidos com Vuejs, NuxtJS, TailwindCSS, Reactjs, Mongodb, Nodejs, Expressjs</p>
 
 
             <Banner hidden={false} >
-            <Swiper
-                pagination={{"type": "progressbar" }}
-                className="mySwiper"
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation={true}
-                onSwiper={(swiper) => console.log(swiper.activeIndex)}
-            >
-                {items.map((item, i) => (
-                    <SwiperSlide key={i}>
-                        <Row>
-                            <img className="responsive"
-                                // className="d-block w-100"
-                                src={item.src}
-                                alt={item.altText}
-                            />
-                        </Row>
-                        <Row>
-                            <Col>
-                                {RowCol(<h3>{item.header}</h3>)}
-                                {RowCol(<p>{item.caption}</p>)}
-                                {RowCol(<a className='linkme' href={item.link}>Link da Aplicação</a>)}
-                                {item.linkInterno ? RowCol(
-                                <p className='linkme' onClick={()=>router.push(item.linkInterno)}>Detalhe da Aplicação</p>
-                                ) : ""}
-                            </Col>
-                        </Row>
-                    </SwiperSlide>
-                ))}
-                
-            </Swiper>
+                <Swiper
+                    pagination={{ "type": "progressbar" }}
+                    className="mySwiper"
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation={true}
+                    onSwiper={(swiper) => console.log(swiper.activeIndex)}
+                >
+                    {carrouselItems.map((item, i) => (
+                        <SwiperSlide key={i}>
+                            <Row>
+                                <img className="responsive"
+                                    src={item.src}
+                                    alt={item.altText}
+                                />
+                            </Row>
+                            <Row>
+                                <Col>
+                                    {RowCol(<h3>{item.header}</h3>)}
+                                    {RowCol(<p>{item.caption}</p>)}
+                                    {RowCol(<a className='linkme' href={item.link}>Link da Aplicação</a>)}
+                                    {item.linkInterno ? RowCol(
+                                        <p className='linkme' onClick={() => router.push(item.linkInterno)}>Detalhe da Aplicação</p>
+                                    ) : ""}
+                                </Col>
+                            </Row>
+                        </SwiperSlide>
+                    ))}
 
-</Banner>
-            <br /><br /><br /><br />
+                </Swiper>
+
+            </Banner>
+
+
+
+            <PortItem
+                srcimage={"/vue3TypescriptPinia.PNG"}
+                link={"/portfolio/vueTypescriptPinia"}
+                linktext={"Vue3 Typescript Pinia."}
+                brief={`Implementação de Vue3 com Typescript e gerenciamento de estados com Pinia`}
+            />
+
+            <PortItem
+                srcimage={"/daniela-consultora.jpg"}
+                link={"/portfolio/daniela"}
+                linktext={"Daniela Consultora."}
+                brief={`Página Institucional da Consultora de Moda e Estilo Daniela Nascimento. Feito em TypeScript + React + TailwindCSS`}
+            />
+
 
             <PortItem
                 srcimage={"/droneproject0.JPG"}
@@ -240,7 +271,7 @@ const Portfolio = () => {
                 linktext={"Site institucional Arquitetar Drone."}
                 brief={`Site de empresa de imagens aéreas. Design por Kin Brand. Responsivo.`}
             />
-<br />
+
             <PortItem
                 srcimage={"/coders0.PNG"}
                 link={"/portfolio/coders"}
@@ -249,7 +280,7 @@ const Portfolio = () => {
                 cadastro, atualiza seu perfil e posta e seque postagens de outros usuários, podendo inclusive fazer comentários. `}
             />
 
-            <br />
+
             <PortItem
                 srcimage={"/cms7.PNG"}
                 link={"/portfolio/cms"}
@@ -258,10 +289,6 @@ const Portfolio = () => {
             (neste exemplo do ramo de alimentos). O front é 100% responsivo. Possui estados administrados com 
             arquitetura flux redux. `}
             />
-
-            <br />
-
-
 
             <PortItem
                 srcimage={"/quizz2.png"}
@@ -272,7 +299,7 @@ const Portfolio = () => {
             Trata-se de uma solução online de exercícios de fixação.`}
             />
 
-            <br />
+
 
             <PortItem
                 srcimage={"/academialogin.JPG"}
@@ -282,7 +309,7 @@ const Portfolio = () => {
             Feito em parceria com meu colega do curso. Fiquei responsável pelo front-end. `}
             />
 
-            <br />
+
 
             <PortItem
                 srcimage={"/characters0.PNG"}
@@ -290,11 +317,10 @@ const Portfolio = () => {
                 linktext={"CharactersDatabase."}
                 brief={`Este projeto é uma aplicação web CRUD para gestão de usuários de academias de ginástica.`}
             />
-            <br />
 
-            {/* <BackBlack>
-<div className="card"></div>
-</BackBlack> */}
+
+
+
 
         </StContainer>
 
@@ -307,6 +333,7 @@ const BackBlack = styled.div`
  background-color:  rgba(10,10,10,0.7);
  border-radius: 5px;
  padding: 10px;
+margin-bottom: 20px;
 
     .card {
         width: 200px;
