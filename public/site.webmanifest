@@ -1,19 +1,31 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "GP Web Developer",
+    "short_name": "GPWeb",
     "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        }
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
-}
+    "theme_color": "#2d2d2d",
+    "background_color": "#2d2d2d",
+    "display": "standalone",
+    "description": "Site Pessoal Gilson Paulo Web Developer. Aqui voçê encontra informações sobre minhas stacks, projetos e atividades.",
+    "start_url": "https://gilsonpaulo.com.br/",
+    "dir": "auto",
+    "scope": "https://gilsonpaulo.com.br/",
+    "lang": "pt",
+    "orientation": "portrait-primary",
+    "display_override": [
+      "browser"
+    ],
+    "categories": [
+      "education"
+    ]
+  }
