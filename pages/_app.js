@@ -45,13 +45,18 @@ const App = ({ Component, pageProps }) => {
     
     useEffect(() => {
 
-        if ((!user.isAdmin) && adminpages.includes(router.route) && router.route.length > 1) {
-           // router.push("/login")
-          //  alert(`Este user não está autorizado em ${router.route}. Redirecionado para login`)
-
+        if ("serviceworker" in navigator) {
+            window.addEventListener("load", () => {
+              navigator.serviceWorker.register("../public/pwabuilder-sw.js").then(reg => {
+                console.log("Service worker file found", reg);
+              }).catc( err =>{
+                console.log('Servicework error', err)
+              })
+            })
+          } else {
+            console.log("Service worker not supported");
         }
-
-    }, [router.route])
+    }, [])
 
 
     useEffect(() => {
@@ -85,6 +90,11 @@ const App = ({ Component, pageProps }) => {
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet"/>
+
+
+
+  
+
 
                 </Head>
                 <Component {...pageProps} />

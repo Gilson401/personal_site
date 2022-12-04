@@ -11,13 +11,18 @@
         "src": "/android-chrome-384x384.png",
         "sizes": "384x384",
         "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
       }
     ],
     "theme_color": "#2d2d2d",
     "background_color": "#2d2d2d",
     "display": "standalone",
     "description": "Site Pessoal Gilson Paulo Web Developer. Aqui voçê encontra informações sobre minhas stacks, projetos e atividades.",
-    "start_url": "https://gilsonpaulo.com.br/",
+    "start_url": "/",
     "dir": "auto",
     "scope": "https://gilsonpaulo.com.br/",
     "lang": "pt",
