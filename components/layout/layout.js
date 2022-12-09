@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./header/header";
+
 import Footer from "./footer/footer";
 import NavDoApp from "./nav/nav";
 import { CgSun, CgMoon } from "react-icons/cg";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container } from "react-bootstrap";
+
 import { useState } from "react";
 import { useEffect } from "react";
-import { Sharegroup } from "../../lib/util";
+
 import styled from "styled-components";
 
 function Layout(props) {

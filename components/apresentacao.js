@@ -6,6 +6,8 @@ const Apresentacao = () => {
 
     const techImages = ['vue.jpg', 'nuxt.jpg', 'mongow.jpg', 'expressw.jpg', 'reactw.jpg', 'nodew.jpg']
 
+    const learningTechImages = ['dart.png', 'flutter.png', 'typescript.png']
+
     return (
         <StContainer >
 
@@ -48,9 +50,9 @@ const Apresentacao = () => {
             <Row>
                 <Col className="d-flex" xs={12}>
                     <div className='my-auto'>
-                        <h1 >
+                        <h2 >
                             Por que contratar-me?
-                        </h1>
+                        </h2>
                         <p>
                             Possuo experiência formal como desenvolvedor web Front-End Jr. iniciando em agosto de 2021 até o momento. Trabalhei com
                             os frameworks VueJS, NuxtJS e libs como Vuex, Highcharts, TailwindCSS entre outras.
@@ -94,6 +96,25 @@ const Apresentacao = () => {
             </Row>
 
 
+            <h2 className=''>Atualmente estou estudando: </h2>
+            <Row xs={6} md={12} className="flex-gap">
+
+
+                {learningTechImages.map(item => (
+
+                    <Col key={item} className="d-flex mb-3" xs={6} md={3}>
+                        <img
+                            className="d-block w-100 my-auto"
+                            src={'/media/' + item}
+                            alt={item}
+                        />
+                    </Col>))}
+
+            </Row>
+           
+
+
+       
         </StContainer>
     )
 }
